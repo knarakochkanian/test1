@@ -1,0 +1,6 @@
+2023/04/19-14:14:20.424 e0b8 Creating DB /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_www.javatpoint.com_0.indexeddb.leveldb since it was missing.
+2023/04/19-14:14:20.429 e0b8 Reusing MANIFEST /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_www.javatpoint.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/19-14:14:25.558 e0b9 Level-0 table #5: started
+2023/04/19-14:14:25.561 e0b9 Level-0 table #5: 1125 bytes OK
+2023/04/19-14:14:25.564 e0b9 Delete type=0 #3
+2023/04/19-14:14:25.564 e0b9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

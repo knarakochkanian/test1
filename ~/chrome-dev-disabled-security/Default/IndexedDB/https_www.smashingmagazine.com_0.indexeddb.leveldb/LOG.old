@@ -1,0 +1,6 @@
+2023/04/18-16:23:27.210 d50f Creating DB /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_www.smashingmagazine.com_0.indexeddb.leveldb since it was missing.
+2023/04/18-16:23:27.218 d50f Reusing MANIFEST /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_www.smashingmagazine.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/18-16:24:43.078 1b7d9 Level-0 table #5: started
+2023/04/18-16:24:43.081 1b7d9 Level-0 table #5: 4366 bytes OK
+2023/04/18-16:24:43.085 1b7d9 Delete type=0 #3
+2023/04/18-16:24:43.085 1b7d9 Manual compaction at level-0 from (begin) .. (end); will stop at (end)

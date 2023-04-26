@@ -1,0 +1,12 @@
+2023/04/21-16:27:55.148 4ed97 Reusing MANIFEST /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/21-16:27:55.148 4ed97 Recovering log #29
+2023/04/21-16:27:55.148 4ed97 Reusing old log /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_www.youtube.com_0.indexeddb.leveldb/000029.log 
+2023/04/21-17:04:37.310 4ed99 Level-0 table #34: started
+2023/04/21-17:04:37.324 4ed99 Level-0 table #34: 1278866 bytes OK
+2023/04/21-17:04:37.326 4ed99 Delete type=0 #29
+2023/04/21-17:08:37.060 4ed97 Compacting 1@1 + 1@2 files
+2023/04/21-17:08:37.070 4ed97 Generated table #35@1: 449 keys, 30440 bytes
+2023/04/21-17:08:37.070 4ed97 Compacted 1@1 + 1@2 files => 30440 bytes
+2023/04/21-17:08:37.072 4ed97 compacted to: files[ 0 0 1 0 0 0 0 ]
+2023/04/21-17:08:37.073 4ed97 Delete type=2 #34
+2023/04/21-17:08:37.073 4ed97 Delete type=2 #31

@@ -1,0 +1,6 @@
+2023/04/20-17:26:11.394 18feb8 Creating DB /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_community.apollographql.com_0.indexeddb.leveldb since it was missing.
+2023/04/20-17:26:11.404 18feb8 Reusing MANIFEST /home/knara/WebstormProjects/test/~/chrome-dev-disabled-security/Default/IndexedDB/https_community.apollographql.com_0.indexeddb.leveldb/MANIFEST-000001
+2023/04/20-17:27:33.573 18feb8 Level-0 table #5: started
+2023/04/20-17:27:33.576 18feb8 Level-0 table #5: 81748 bytes OK
+2023/04/20-17:27:33.579 18feb8 Delete type=0 #3
+2023/04/20-17:27:33.580 18feb8 Manual compaction at level-0 from (begin) .. (end); will stop at (end)
