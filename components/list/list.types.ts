@@ -1,3 +1,4 @@
+
 interface variables {
         first_name: string,
         last_name: string,
@@ -6,3 +7,7 @@ interface variables {
         company_id: string,
 }
 
+interface IFormInput {
+        first_name: String;
+        id : number
+}

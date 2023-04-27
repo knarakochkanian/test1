@@ -3,8 +3,10 @@ import {useQuery, useMutation} from '@apollo/client';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import {createFilterOptions} from "@mui/material";
-import {ADD_LIST, GET_LIST} from "@/components/list/list.query";
-import {variables} from "./list.types";
+import {ADD_LIST, ADD_LIST_POSITIONS, GET_LIST, GET_LIST_POSITIONS} from "@/components/list/list.query";
+import {variables , IFormInput} from "./list.types";
+
+
 
 export default function List(): JSX.Element {
 
@@ -20,7 +22,7 @@ export default function List(): JSX.Element {
     if (loading) return <div> Loading... </div>;
     if (error) return <div>Error! {error.message}</div>;
 
-    const  handleChange = async (event, newValue) => {
+    const  handleChange = async (event:React.SyntheticEvent<EventTarget>, newValue:any) => {
         if (typeof newValue === 'string') {
             setValue({
                 name: newValue,
@@ -56,9 +58,10 @@ export default function List(): JSX.Element {
             });
         }
         return filtered;
+
     }
-    // @ts-ignore
-    const handlerGetLabel =  (items) => {
+
+    const handlerGetLabel =  (items:any) => {
         // Value selected with enter, right from the input
         if (typeof items === 'string') {
             return items;
@@ -71,8 +74,9 @@ export default function List(): JSX.Element {
         return items.name;
     }
 
+
     return (
-        <form  className='list'>
+        <section  className='list' >
             <Autocomplete
                 value={value}
                 onChange={ handleChange}
@@ -87,9 +91,11 @@ export default function List(): JSX.Element {
                 sx={{width: 300}}
                 freeSolo
                 renderInput={(params) => (
-                    <TextField {...params} label="Search and add list" />
+                    <TextField {...params} label="Search and add list"/>
                 )}
+
             />
-        </form>
+        </section>
     );
 }
+

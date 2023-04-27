@@ -3,8 +3,22 @@
 
 }
 .list {
-  padding: 30px;
-display: flex;
+  display: flex;
   align-items: center;
   justify-content: center;
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main>div>button{
+display:  block;
+  margin: 40px;
+}
+.main>div>div{
+padding-top: 40px;
+}
+.main>div>div:nth-child{
+  padding: 20px;
 }
