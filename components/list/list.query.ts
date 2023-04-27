@@ -1,8 +1,11 @@
 import {gql} from "@apollo/client";
 
 export const GET_LIST = gql`
-    query GetList{
-        applicantIndividualCompanyPositions {
+    query GetList ($page: Int){
+        applicantIndividualCompanyPositions(page:$page){
+            paginatorInfo{
+                lastPage, currentPage,
+            }
             data {
                 id
                 name
@@ -39,15 +42,3 @@ export const ADD_LIST_POSITIONS = gql`
     }
 `;
 
-
-// query GetList($page: Int){
-//     applicantIndividualCompanyPositions(page:$page){
-//         paginatorInfo{
-//             lastPage, currentPage,
-//         }
-//         data {
-//             id
-//             name
-//         }
-//     }
-// }
