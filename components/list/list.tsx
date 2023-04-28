@@ -7,7 +7,6 @@ import {ADD_LIST, ADD_LIST_POSITIONS, GET_LIST, GET_LIST_POSITIONS} from "@/comp
 import {variables , IFormInput} from "./list.types";
 
 
-
 export default function List(): JSX.Element {
 
     const [addList, {data:myData}] = useMutation(ADD_LIST);
@@ -17,7 +16,6 @@ export default function List(): JSX.Element {
     const [value, setValue] = useState<OptionType | null>(null);
 
     const {loading, error, data} = useQuery(GET_LIST);
-    console.log(data)
 
     if (loading) return <div> Loading... </div>;
     if (error) return <div>Error! {error.message}</div>;
@@ -46,6 +44,7 @@ export default function List(): JSX.Element {
             setValue(newValue);
         }
     }
+
    const handleFilter = (items, params) => {
         const filtered = filter(items, params);
         const {inputValue} = params;

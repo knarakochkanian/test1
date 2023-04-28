@@ -1,33 +1,18 @@
 import List from '../components/list/list'
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
-import { useForm, Controller } from "react-hook-form";
+
+import SelectSection from "@/components/Select/SelectSection";
 
 
-export default function Home() {
+export default function HomePage() {
 
-    const { handleSubmit, reset, control, formState: { errors }} = useForm();
-    const onSubmit = (data: object) => console.log(data);
-    console.log("errors", errors)
-    // @ts-ignore
+
+
     return (
-
-            <form className='main'>
+            <main className='main'>
                 <div>
                     <List/>
-                    <Controller
-                        name={"textValue"}
-                        control={control}
-                        rules={{ required: "pusto" }}
-                        render={({ field: { onChange, value } } ) => (
-                            <TextField  required onChange={onChange} label={"Text"} id="value"  error={!!errors.textValue?.message}   helperText={errors.textInput && `${errors.textInput.message}`}  />
-
-                        )}
-                    />
-                    <Button onClick={handleSubmit(onSubmit)} variant="contained">Submit</Button>
-                    <Button onClick={() => reset()} variant={"outlined"}>Reset</Button>
-
+                    <SelectSection />
                 </div>
-            </form>
+            </main>
     )
 }

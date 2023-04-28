@@ -12,13 +12,11 @@
   justify-content: center;
   align-items: center;
 }
-.main>div>button{
-display:  block;
+.select-section>div{
+ display:  block;
   margin: 40px;
 }
-.main>div>div{
-padding-top: 40px;
-}
-.main>div>div:nth-child{
-  padding: 20px;
+
+.select-section>div>div{
+  margin-top: 40px;
 }
