@@ -16,7 +16,6 @@ export default function SelectSection() {
     const [relations, setRelations] = useState([]);
     const [positions, setPositions] = useState([]);
     const {handleSubmit, reset, control, formState: {errors}} = useForm();
-console.log(errors, "11111111111111")
     const handleChangeRelations = (event:any) => {
         setRelations(event.target.value);
     };
