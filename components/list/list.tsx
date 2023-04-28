@@ -16,7 +16,6 @@ export default function List(): JSX.Element {
     const [value, setValue] = useState<OptionType | null>(null);
 
     const {loading, error, data} = useQuery(GET_LIST);
-
     if (loading) return <div> Loading... </div>;
     if (error) return <div>Error! {error.message}</div>;
 

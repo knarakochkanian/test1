@@ -1,52 +1,62 @@
-import React from 'react';
-import Box from '@mui/material/Box';
-import InputLabel from '@mui/material/InputLabel';
+import React, {useState} from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, {SelectChangeEvent} from '@mui/material/Select';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
 import {useForm, Controller} from "react-hook-form";
-
+import {ADD_LIST, ADD_LIST_POSITIONS, GET_LIST, GET_LIST_POSITIONS} from "@/components/list/list.query";
+import {variables , IFormInput} from "../list/list.types";
+import {useQuery, useMutation} from '@apollo/client';
 
 export default function SelectSection() {
-    const [relations, setRelations] = React.useState("");
-    const [positions, setPositions] = React.useState("");
 
-
-    const handleChangeRelations = (event: SelectChangeEvent) => {
-        setRelations(event.target.value as string);
-    };
-    const handleChangePosition = (event: SelectChangeEvent) => {
-        setRelations(event.target.value as string);
-    };
-
+    const {loading, error, data} = useQuery(GET_LIST);
+    const {data:dataPosition} = useQuery(GET_LIST);
+    const [relations, setRelations] = useState([]);
+    const [positions, setPositions] = useState([]);
     const {handleSubmit, reset, control, formState: {errors}} = useForm();
-    const onSubmit = (data: object) => console.log(data);
+console.log(errors, "11111111111111")
+    const handleChangeRelations = (event:any) => {
+        setRelations(event.target.value);
+    };
+    const handleChangePositions = (event:any) => {
+        setPositions(event.target.value);
+    };
 
+    const onSubmit = (data: object) => console.log(data);
+    if (loading) return <div> Loading... </div>;
+    if (error) return <div>Error! {error.message}</div>;
+    // @ts-ignore
     return (
+
         <form className="select-section">
             <Controller
-                render={({ field }) => (
-                    <Select {...field}>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
+                render={({ field: onChange= {handleChangeRelations}  }) => (
+                    <Select>
+                        {data.applicantIndividualCompanyPositions.data?.map((relations) => {
+                            return <MenuItem value={relations} key={relations.index}>{relations.name}</MenuItem>;
+                        })}
                     </Select>
                 )}
+                rules={{required: "Right something"}}
                 control={control}
-                name="select"
+                name={"select"}
                 defaultValue={""}
             />
             <Controller
-                render={({ field }) => (
-                    <Select {...field}>
-                        <MenuItem value={10}>Ten</MenuItem>
-                        <MenuItem value={20}>Twenty</MenuItem>
+                render={({ field: onChange= {handleChangePositions} }) => (
+                    <Select>
+                        {data.applicantIndividualCompanyPositions.data?.map((positions) => {
+                            return <MenuItem value={positions} key={positions.index}>{positions.name}</MenuItem>;
+                        })}
                     </Select>
                 )}
+                rules={{required: "Right something"}}
                 control={control}
-                name="select"
+                name={"select"}
                 defaultValue={""}
+
             />
             <Controller
                 name={"textValue"}
